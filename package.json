@@ -11,18 +11,22 @@
     "lint:fix": "npm run lint --fix",
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json}'",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "ts-esm": "node --experimental-specifier-resolution=node --max_old_space_size=16000 --loader ts-node/esm"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.32.6",
     "lodash": "^4.17.21",
     "next": "13.4.19",
+    "querystring": "^0.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "recoil": "^0.7.7",
     "recoil-persist": "^5.1.0",
+    "superstruct": "^1.0.3",
     "typescript": "5.1.6"
   },
+  "type": "module",
   "devDependencies": {
     "@pandacss/dev": "^0.11.1",
     "@storybook/addon-essentials": "^7.1.1",
